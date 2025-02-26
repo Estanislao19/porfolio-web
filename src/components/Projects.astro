@@ -4,36 +4,67 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
-
+import Mongo from "./icons/mongo.astro"
+import NEXTS from "./icons/Estani.astro"
+import Websockets from './icons/websocket.astro'
+import wordpress from './icons/wordpress.astro'
 const TAGS = {
   NEXT: {
-    name: "Next.js",
+    name: "Angular.js",
     class: "bg-black text-white",
     icon: NextJS,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    name: "Node.js",
+    class: "bg-black text-white",
     icon: Tailwind,
   },
+  MONGO: {
+    name: "Mongodb",
+    class: "bg-black text-white",
+    icon: Mongo,
+  },
+  NEXTS: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NEXTS,
+  },
+  WEBSOCKETS: {
+    name: "Websockets",
+    class: "bg-black text-white",
+    icon: Websockets,
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-black text-white",
+    icon: wordpress,
+  }
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Dashboard Laikad-space-v1",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
+      "Se creó un dashboard en AngularJS para el análisis de campañas, mejorando el seguimiento y visualización de clics en dispositivos móviles y desktop. La plataforma proporciona métricas en tiempo real, facilitando la optimización del rendimiento y la toma de decisiones estratégicas.",
+    link: "https://admin.laikad.com/app/#/app/dashboard/list",
     github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/projects/dashh.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.MONGO],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Dashboard Laikad-space-v2",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+      "Se implementó un panel de control para el análisis de campañas, empleando Next.js, lo que resultó en una mejora en el desempeño, la optimización para motores de búsqueda y la experiencia del usuario. Ahora, este panel ofrece nuevas capacidades, como filtros de búsqueda avanzados, comunicación en tiempo real a través de chat y una clasificación de estadísticas. Estas funcionalidades permiten un seguimiento más minucioso de los clics tanto en dispositivos móviles como de escritorio, proporcionando métricas actualizadas al instante para facilitar la toma de decisiones estratégicas.",
     link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/projects/nuevo-front.png",
+    tags: [TAGS.NEXTS, TAGS.WEBSOCKETS],
+  },
+  {
+    title: "Website Laikad",
+    description:
+      "Laikad es una agencia de mercadotecnia digital enfocada en el estudio y seguimiento de interacciones de usuarios en plataformas móviles y de escritorio. A través de la interpretación de datos detallados, optimizamos las estrategias publicitarias para impulsar el desempeño y lograr un mayor índice de conversiones.",
+    link: "https://laikad.com",
+    image: "/projects/laikad-app.png",
+    tags: [TAGS.WORDPRESS],
   },
 ]
 ---
