@@ -65,39 +65,39 @@ const THEMES = ["Light", "Dark", "System"]
   const themesMenu = document.getElementById("themes-menu")
 
   const getThemePreference = () => {
-    if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("theme") ?? "system"
-    }
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light"
+  if (typeof localStorage !== "undefined") {
+    return localStorage.getItem("theme") ?? "system"; // Si no hay preferencia, usa "system"
   }
+  return "system";
+};
 
-  const updateIcon = (themePreference) => {
-    document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
-      element.style.scale = element.id === themePreference ? "1" : "0"
-    })
+const updateIcon = (themePreference) => {
+  if (!themePreference) themePreference = "dark"; // 🔹 Forzar dark si no hay preferencia
+  document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
+    element.style.scale = element.id === themePreference ? "1" : "0";
+  });
+};
+
+const updateTheme = () => {
+  if (remove != null) {
+    remove();
   }
+  matchMedia.addEventListener("change", updateTheme);
+  remove = () => {
+    matchMedia.removeEventListener("change", updateTheme);
+  };
 
-  const updateTheme = () => {
-    if (remove != null) {
-      remove()
-    }
-    matchMedia.addEventListener("change", updateTheme)
-    remove = () => {
-      matchMedia.removeEventListener("change", updateTheme)
-    }
+  const themePreference = getThemePreference();
 
-    const themePreference = getThemePreference()
-    const isDark =
-      themePreference === "dark" ||
-      (themePreference === "system" && matchMedia.matches)
+  // 🔹 Si "system" está seleccionado, por defecto será oscuro
+  const isDark =
+    themePreference === "dark" ||
+    (themePreference === "system" && !localStorage.getItem("theme") && matchMedia.matches) ||
+    (themePreference === "system" && !matchMedia.matches);
 
-    updateIcon(themePreference)
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark")
-  }
-
+  updateIcon(themePreference);
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+};
   updateTheme()
 
   document.addEventListener("click", () => themesMenu.classList.remove("open"))
