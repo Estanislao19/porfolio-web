@@ -25,7 +25,10 @@ import SocialPill from "@/components/SocialPill.astro"
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hola somos soft-dev,una compania encargada de hacer tus sueños realidad.
+    Hola <br/>
+    somos soft-dev una<br/>
+    compania encargada <br/>
+    de hacer tus sueños realidad.
   </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
@@ -37,15 +40,15 @@ import SocialPill from "@/components/SocialPill.astro"
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:softdev.notification@gmail.com">
       <MailIcon class="size-4" />
-      Contáctame
+      <Badge>Contáctanos</Badge> 
     </SocialPill>
     <SocialPill href="https://www.linkedin.com/in/estanislao-valdez-a6630b236/">
       <LinkedInIcon class="size-4" />
-      LinkedIn
+      <Badge>LinkedIn</Badge>
     </SocialPill>
     <SocialPill href="https://www.linkedin.com/in/alexis-correa-dev/">
       <LinkedInIcon class="size-4" />
-      LinkedIn
+      <Badge>LinkedIn</Badge>
     </SocialPill>
   </nav>
 </div>

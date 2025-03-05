@@ -6,7 +6,7 @@ import Header from "../components/Header.astro"
 
 interface Props {
   title: string
-  description: string
+  description?: string;
 }
 
 const { description, title } = Astro.props
