@@ -7,6 +7,7 @@ import LinkButton from "./LinkButton.astro"
 import Mongo from "./icons/mongo.astro"
 import NEXTS from "./icons/Estani.astro"
 import Websockets from './icons/websocket.astro'
+import react from './icons/react.astro'
 import wordpress from './icons/wordpress.astro'
 const TAGS = {
   NEXT: {
@@ -38,7 +39,12 @@ const TAGS = {
     name: "Wordpress",
     class: "bg-black text-white",
     icon: wordpress,
-  }
+  },
+  REACT: {
+    name: "React.js",
+    class: "bg-black text-white",
+    icon: react,
+  },
 }
 const PROJECTS = [
   {
@@ -48,6 +54,14 @@ const PROJECTS = [
     link: "https://admin.laikad.com/app/#/app/dashboard/list",
     image: "/projects/dashh.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.MONGO],
+  },
+   {
+    title: "Farmacia Curva Rocess",
+    description:
+      "Curva-Roces es un e-commerce farmacéutico que ofrece una amplia gama de medicamentos y productos de salud. Con un sistema de pago seguro y logística eficiente, garantizamos una experiencia de compra rápida y confiable para nuestros clientes.",
+    
+    image: "/projects/farmacias curva roces.png",
+    tags: [ TAGS.TAILWIND,TAGS.MONGO,TAGS.NEXTS],
   },
   {
     title: "Dashboard Laikad-space-v2",
