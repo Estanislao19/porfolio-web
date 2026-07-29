@@ -1,40 +1,108 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+
 const EXPERIENCE = [
   {
-    title: "Creacion de la aplicacion de la empresa Laikad",
+    title: "Laikad Space v1",
     company: "Laikad",
     description:
-      "Laikad es una empresa de marketing digital especializada en el análisis y rastreo de clics desde dispositivos móviles y desktop. Optimiza campañas con datos precisos para mejorar el rendimiento y maximizar conversiones.",
+      "Desarrollo de la primera versión del panel de análisis de campañas utilizando AngularJS, enfocada en la visualización de clics en tiempo real y el control de métricas clave para la toma de decisiones estratégicas.",
+    link: "https://admin.laikad.com/auth/signin",
+  },
+  {
+    title: "Laikad Space v2",
+    company: "Laikad",
+    description:
+      "Evolución del dashboard de análisis de campañas desarrollado con Next.js, mejorando rendimiento, SEO y experiencia de usuario. Incluye filtros avanzados, chat en tiempo real y ranking de estadísticas para un rastreo más preciso de campañas.",
+  },
+  {
+    title: "Creación de la aplicación de la empresa Laikad",
+    company: "Laikad",
+    description:
+      "Laikad es una empresa de marketing digital especializada en el análisis y rastreo de clics en dispositivos móviles y desktop, optimizando campañas publicitarias mediante métricas precisas y datos en tiempo real.",
     link: "https://laikad.com/",
   },
   {
-    title: "Farmacia curva roces",
-    company: "curva roces",
+  title: "Inspira – Plataforma Web Gamificada con Inteligencia Artificial",
+  company: "Inspira",
+  description:
+    "Desarrollo de una plataforma web progresiva (PWA) enfocada en el crecimiento personal, la formación de hábitos positivos y el aprendizaje continuo. La solución integra contenido multimedia de alto valor, como audios, libros y recursos educativos, junto con un sistema avanzado de gamificación basado en medallas, trofeos, niveles y un camino de progreso estructurado. Además, incorpora inteligencia artificial para mejorar la interacción con los usuarios y ofrecer una experiencia más personalizada. Su arquitectura fue diseñada con foco en alta disponibilidad, rendimiento y escalabilidad, permitiendo el acceso desde cualquier dispositivo y facilitando la integración del desarrollo personal en la rutina diaria. El objetivo principal del proyecto es transformar el crecimiento personal en una experiencia inmersiva, motivadora y entretenida.",
+  link: "https://appinspira.com.mx/",
+},
+  {
+    title: "Plataforma Groove – Gestión integral de eventos y tickets",
+    company: "Groove / Fest-Go",
     description:
-      "Creamos una tienda online para la Farmacia Curva Roces, donde puedes comprar medicamentos y productos de cosmética fácilmente. La plataforma incluye funciones esenciales como carrito de compras, pagos seguros, registro e inicio de sesión, gestión de pedidos y seguimiento de envíos, haciendo tu experiencia de compra más sencilla y eficiente.",
+      "Desarrollo de una plataforma SaaS para la gestión completa de eventos, tandas de tickets y ventas online. El sistema cuenta con backend en Node.js + Express y frontend en Next.js, con autenticación por roles (User, Reseller y Admin) mediante AWS Cognito. Incluye gestión de eventos, administración de tickets (VIP y generales), ventas directas y por revendedores con integración a Mercado Pago, validación de tickets mediante escaneo QR en tiempo real, reportes administrativos de ventas y revenue, y panel de usuario con historial de compras y descarga de tickets. La arquitectura fue diseñada con foco en seguridad, escalabilidad y buenas prácticas de APIs REST y manejo de JWT.",
+    link: "https://fest-go.com/",
   },
   {
-    title: "Laikad-space-v1",
-    company: "Version 1 de laikad",
+    title: "Sistema de Barras Groove – Ventas y stock para eventos",
+    company: "Groove / Fest-Go",
     description:
-      "Creamos la primera versión de un panel de análisis de campañas usando AngularJS, pensado para facilitar el seguimiento y la visualización de clics en móviles y computadoras. Esta herramienta ofrece datos en tiempo real, simplificando el control de resultados y ayudando a tomar decisiones estratégicas de forma clara.",
+      "Desarrollo de una plataforma web para la gestión integral de barras en eventos, discotecas y festivales. Permite administrar usuarios con roles (Admin y Bartender), productos, stock y gastos; crear eventos con múltiples barras; y generar tickets automáticos con impresión térmica integrada. Incluye autenticación con JWT, control de stock por barra, reportes, auditorías y métricas en tiempo real, bajo una arquitectura API REST modular orientada a trazabilidad operativa y control de ventas por evento.",
+    link: "https://festgogest.com/",
   },
   {
-    title: "Laikad-space-v2",
-    company: "Version 2 de laikad",
+    title: "Fest-Go System Table – Gestión de restaurantes y barras",
+    company: "Fest-Go",
     description:
-      "Se desarrolló un dashboard de análisis de campañas con Next.js, mejorando rendimiento, SEO y experiencia de usuario. Ahora incluye nuevos filtros de búsqueda, chat en tiempo real y ranking de estadísticas, permitiendo un rastreo más preciso de clics en dispositivos móviles y desktop, con métricas en tiempo real para optimizar decisiones.",
+      "Desarrollo de API y backend para una plataforma integral de gestión de restaurantes y barras en eventos. Permite administrar mesas, pedidos, inventario, reservas, empleados, facturación y reportes, con autenticación segura mediante JWT y control de roles (Admin y Usuario de Barra). Implementado con NestJS bajo arquitectura modular MVC y DynamoDB como base NoSQL en AWS. Incluye dashboard en tiempo real, auditoría de acciones, reportes PDF/Excel, soporte de impresión térmica (ESC/POS), manejo de stock y gastos, y documentación REST con paginación estándar y códigos HTTP consistentes. Preparado para entornos productivos y alta concurrencia.",
+    link: "https://festgo-bar.com/login",
   },
+  {
+    title: "Aplicación Móvil Turística Multiplataforma (Flutter)",
+    company: "Dev-Tech",
+    description:
+      "Desarrollo del MVP de una aplicación turística multiplataforma (Android e iOS) utilizando Flutter, basada en diseño Figma provisto por el cliente. El proyecto incluye la implementación de 12 pantallas funcionales (onboarding, login, home/feed, detalle de contenido, mapa, puntos y perfil), con navegación fluida y alta fidelidad visual. Se integraron servicios REST simulados mediante mocks JSON para representar flujos reales, soporte básico de internacionalización (ES / EN) y criterios mínimos de accesibilidad. La entrega contempla proyecto compilable, pruebas funcionales, documentación de build y material de demostración, con una arquitectura preparada para evolución futura.",
+  },
+  {
+  title: "Ferretería Candelaria – Sitio Web B2B con Catálogo Digital",
+  company: "Ferretería Candelaria",
+  description:
+    "Desarrollo y maquetación de un sitio web corporativo en WordPress para una ferretería, con enfoque en catálogo digital, captación de clientes y solicitudes de cotización. El proyecto incluyó la construcción de Home, páginas internas, catálogo de productos, categorías, formularios, sección de contratistas, shopper virtual, blog, área Mi Cuenta y diseño responsive. Se integró WooCommerce en modo catálogo, B2BKing para funcionalidades B2B, DearFlip para catálogo interactivo y WP Job Manager para gestión de empleos. También se realizaron ajustes de navegación, optimización mobile, correcciones visuales, mejoras de contraste, header fijo y QA general para dejar el sitio listo para revisión y uso profesional.",
+  link: "https://nivaxel.site/ferreteriacandelaria/",
+},
+  {
+  title: "Flash Realty – Plataforma Inmobiliaria de Captación Digital",
+  company: "Flash Realty",
+  description:
+    "Diseño y desarrollo de una plataforma inmobiliaria enfocada en fortalecer la presencia digital de la empresa y optimizar la generación de oportunidades comerciales. La solución integra presentación de servicios, propiedades destacadas, testimonios, formularios de contacto y múltiples puntos de conversión, ofreciendo una experiencia profesional, intuitiva y orientada a la captación de potenciales clientes.",
+  link: "https://nivaxel.site/flash/",
+},
+{
+  title: "Migración de Seguridad Crítica para Aplicación Mobile Cordova",
+  company: "BCM App",
+  description:
+    "Migración y modernización de una aplicación móvil empresarial desarrollada en Cordova/PhoneGap para Android e iOS, utilizada por técnicos de campo para la gestión de órdenes de trabajo. El proyecto incluyó la implementación de almacenamiento seguro de credenciales mediante Secure Storage y Keychain, refactorización completa del flujo de autenticación y cierre de sesión, adecuación a las políticas actuales de seguridad móvil y compatibilidad con versiones recientes de Android e iOS. Además, se optimizaron los flujos funcionales de altas, cambios de domicilio, modificaciones de conexión y equipamiento, aprovisionamiento automático y manual de equipos CPE/ONT, configuración de WiFi, validación de potencia óptica, pruebas de velocidad, persistencia de datos entre pantallas, integración con APIs REST y resolución de incidencias críticas, garantizando la continuidad operativa sin alterar la lógica de negocio existente.",
+},
+  {
+    title: "Desarrollo y Optimización de Aplicaciones Mobile (Android & iOS)",
+    company: "Dev-Tech",
+    description:
+      "Diseño, desarrollo y optimización de aplicaciones móviles de alto rendimiento para Android e iOS, con foco en estabilidad, escalabilidad y experiencia de usuario. El trabajo incluyó análisis técnico y funcional, optimización de código y performance, resolución de errores críticos, implementación de buenas prácticas de desarrollo mobile, testing integral (QA), generación de builds optimizados y publicación de releases en Google Play Store y Apple App Store. Aplicamos una metodología iterativa para asegurar consistencia entre plataformas y un resultado final robusto, confiable y listo para producción.",
+  },
+  {
+    title: "Farmacia Marquez City",
+    company: "Marquez City",
+    description:
+      "Creamos una tienda online para la Farmacia Marquez City, donde los usuarios pueden comprar medicamentos y productos de cosmética de forma simple y segura. La plataforma incluye carrito de compras, pagos online, autenticación de usuarios, gestión de pedidos y seguimiento de envíos.",
+  },
+  {
+    title: "App Android de despacho y escaneo QR",
+    company: "Distribuidora logística",
+    description:
+      "Desarrollo de una aplicación móvil Android para la gestión de despacho en distribuidoras. Permite escanear remitos mediante QR, completar formularios dinámicos según el rol operativo, capturar fotos y observaciones, y sincronizar la información en tiempo real con Google Sheets mediante Google Apps Script. Incluye sistema de multi-scanner continuo para procesar grandes volúmenes de remitos de forma ágil y eficiente.",
+  },
+
+  // ✅ FEST-GO SYSTEM TABLE – CON LINK A SABER MÁS
 ]
 ---
 
 <ol class="relative mt-16">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="">
-        <ExperienceItem {...experience} />
-      </li>
-    ))
-  }
+  {EXPERIENCE.map((experience) => (
+    <li>
+      <ExperienceItem {...experience} />
+    </li>
+  ))}
 </ol>

@@ -1,14 +1,14 @@
 ---
-
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Mongo from "./icons/mongo.astro"
 import NEXTS from "./icons/Estani.astro"
-import Websockets from './icons/websocket.astro'
-import react from './icons/react.astro'
-import wordpress from './icons/wordpress.astro'
+import Websockets from "./icons/websocket.astro"
+import react from "./icons/react.astro"
+import wordpress from "./icons/wordpress.astro"
+
 const TAGS = {
   NEXT: {
     name: "Angular.js",
@@ -46,37 +46,114 @@ const TAGS = {
     icon: react,
   },
 }
+
 const PROJECTS = [
   {
-    title: "Dashboard Laikad-space-v1",
+    title: "Dashboard Laikad – v2",
     description:
-      "Se creó un dashboard en AngularJS para el análisis de campañas, mejorando el seguimiento y visualización de clics en dispositivos móviles y desktop. La plataforma proporciona métricas en tiempo real, facilitando la optimización del rendimiento y la toma de decisiones estratégicas.",
-    link: "https://admin.laikad.com/app/#/app/dashboard/list",
-    image: "/projects/dashh.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.MONGO],
-  },
-   {
-    title: "Farmacia Curva Rocess",
-    description:
-      "Curva-Roces es un e-commerce farmacéutico que ofrece una amplia gama de medicamentos y productos de salud. Con un sistema de pago seguro y logística eficiente, garantizamos una experiencia de compra rápida y confiable para nuestros clientes.",
-    
-    image: "/projects/farmacias curva roces.png",
-    tags: [ TAGS.TAILWIND,TAGS.MONGO,TAGS.NEXTS],
-  },
-  {
-    title: "Dashboard Laikad-space-v2",
-    description:
-      "Se implementó un panel de control para el análisis de campañas, empleando Next.js, lo que resultó en una mejora en el desempeño, la optimización para motores de búsqueda y la experiencia del usuario. Ahora, este panel ofrece nuevas capacidades, como filtros de búsqueda avanzados, comunicación en tiempo real a través de chat y una clasificación de estadísticas. Estas funcionalidades permiten un seguimiento más minucioso de los clics tanto en dispositivos móviles como de escritorio, proporcionando métricas actualizadas al instante para facilitar la toma de decisiones estratégicas.",
+      "Evolución del panel de campañas con Next.js, enfocada en performance, UX y escalabilidad. Incorpora filtros avanzados, rankings y comunicación en tiempo real para un seguimiento más preciso del tráfico.",
     image: "/projects/nuevo-front.png",
     tags: [TAGS.NEXTS, TAGS.WEBSOCKETS],
+    link: "https://admin.laikad.com/app/#/app/dashboard/list",
+  },
+  {
+    title: "Dashboard Laikad – v1",
+    description:
+      "Dashboard de análisis de campañas desarrollado en AngularJS para el monitoreo de clics y métricas clave en tiempo real. Permite visualizar rendimiento de campañas y optimizar decisiones basadas en datos.",
+    image: "/projects/dashh.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGO],
   },
   {
     title: "Website Laikad",
     description:
-      "Laikad es una agencia de mercadotecnia digital enfocada en el estudio y seguimiento de interacciones de usuarios en plataformas móviles y de escritorio. A través de la interpretación de datos detallados, optimizamos las estrategias publicitarias para impulsar el desempeño y lograr un mayor índice de conversiones.",
+      "Sitio institucional de agencia de marketing digital, orientado a comunicar servicios, propuesta de valor y enfoque basado en análisis de datos y optimización de campañas.",
     link: "https://laikad.com",
     image: "/projects/laikad-app.png",
     tags: [TAGS.WORDPRESS],
+  },
+  {
+  title: "Inspira – Ecosistema Digital de Transformación Personal",
+  description:
+    "Plataforma enfocada en el crecimiento humano y la construcción de hábitos positivos mediante una experiencia inmersiva basada en contenido educativo, seguimiento de objetivos y mecánicas de motivación. Inspira convierte el desarrollo personal en un recorrido dinámico donde el usuario puede avanzar, desbloquear logros y mantener la constancia a través de una experiencia diseñada para generar compromiso a largo plazo.",
+  link: "https://appinspira.com.mx/",
+  image: "/projects/inspira.png",
+  tags: [TAGS.NEXTS, TAGS.TAILWIND],
+},
+{
+    title: "Groove (Fest-Go)",
+    description:
+      "Plataforma SaaS para la gestión de eventos y venta de tickets online. Permite crear eventos, administrar tandas de entradas, procesar ventas y validar accesos mediante QR. Diseñada como un sistema escalable, seguro y orientado a alto volumen de usuarios.",
+    link: "https://fest-go.com/",
+    image: "/projects/festgo.png",
+    tags: [TAGS.NEXTS, TAGS.TAILWIND],
+  },
+  {
+    title: "Sistema de Barras Groove (Fest-Go Gest)",
+    description:
+      "Plataforma web para la gestión integral de barras en eventos, discotecas y festivales. Permite administrar usuarios por rol (Admin y Bartender), productos, stock, gastos y múltiples barras por evento. Incluye generación de tickets con impresión térmica, control de stock por barra, reportes, auditorías y métricas en tiempo real sobre una arquitectura API REST modular.",
+    link: "https://festgogest.com/",
+    image: "/projects/bartender.png",
+    tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
+  },
+  {
+    title: "Fest-Go System Table – API de gestión de restaurantes y barras",
+    description:
+      "Backend/API REST documentada (OAS 3.0) para la gestión integral de restaurantes y barras en eventos: mesas, pedidos, inventario con proveedores, reservas con CRM, empleados y roles, facturación y reportes. Incluye autenticación JWT (Bearer), auditoría completa, dashboard en tiempo real, reportes PDF/Excel e integración con impresión térmica ESC/POS. Arquitectura modular con NestJS + TypeScript y DynamoDB en AWS, con validación de datos, configuración centralizada y paginación estándar (page/limit) para endpoints de listas.",
+    image: "/projects/sistemabar.png",
+    tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
+    link: "https://festgo-bar.com/",
+  },
+  {
+    title: "App Turística Multiplataforma (Flutter) – MVP",
+    description:
+      "MVP multiplataforma (Android/iOS) desarrollado en Flutter con alta fidelidad a diseño Figma. Incluye 12 pantallas clave (onboarding, login, feed, detalle, mapa, puntos y perfil), navegación fluida, arquitectura escalable, mocks JSON para simular servicios REST, soporte básico ES/EN y criterios mínimos de accesibilidad. Entrega compilable con pruebas funcionales, documentación de build y material de demo (capturas/video).",
+    image: "/projects/aventura.png",
+    tags: [TAGS.REACT],
+  },
+  {
+  title: "Ferretería Candelaria – Catálogo B2B en WordPress",
+  description:
+    "Sitio web corporativo y catálogo digital desarrollado en WordPress para una ferretería, orientado a la presentación de productos, servicios y solicitudes de cotización. El proyecto incluye Home, páginas internas, catálogo WooCommerce, categorías de productos, ficha de producto, formularios, sección de contratistas, shopper virtual, blog, área Mi Cuenta y diseño responsive. Se integraron funcionalidades B2B con B2BKing, catálogo interactivo con DearFlip y gestión de empleos con WP Job Manager, manteniendo una identidad visual profesional y una experiencia optimizada para desktop y mobile.",
+  link: "https://nivaxel.site/ferreteriacandelaria/",
+  image: "/projects/ferreteria-candelaria.png",
+  tags: [TAGS.WORDPRESS],
+},
+  {
+  title: "Flash Realty – Plataforma Inmobiliaria",
+  description:
+    "Sitio web inmobiliario orientado a fortalecer la presencia digital de la marca y generar oportunidades comerciales. La plataforma presenta servicios de venta, alquiler y administración de propiedades, integra secciones de propiedades destacadas, testimonios, preguntas frecuentes, formularios de contacto y accesos directos a canales de comunicación. Diseñada para transmitir confianza, facilitar la navegación y convertir visitantes en potenciales clientes.",
+  link: "https://nivaxel.site/flash/",
+  image: "/projects/flash-realty.png",
+  tags: [TAGS.WORDPRESS],
+},
+{
+  title: "BCM App – Migración de Seguridad Mobile Cordova",
+  description:
+    "Migración de seguridad crítica y modernización de una aplicación móvil empresarial desarrollada en Cordova/PhoneGap para Android e iOS. El proyecto incluyó almacenamiento seguro de credenciales con Secure Storage, refactorización del login y logout, adaptación de flujos críticos de órdenes de trabajo, altas, cambios de domicilio, modificación de conexión y equipamiento. También se optimizó el aprovisionamiento de equipos CPE/ONT, validación de potencia óptica, configuración WiFi, test de velocidad, persistencia de datos entre pantallas e integración con APIs REST del backend BCM, manteniendo la compatibilidad funcional de una app productiva.",
+  image: "/projects/bcm-app.png",
+  tags: [TAGS.REACT, TAGS.TAILWIND],
+},
+  {
+    title: "Optimización y Deploy de Apps Mobile (Android & iOS)",
+    description:
+      "Proyecto de desarrollo, optimización y estabilización de una aplicación mobile completa para Android e iOS. Incluyó análisis técnico y funcional, mejora de arquitectura, optimización de código y performance, resolución de errores críticos, implementación de buenas prácticas, testing integral (QA), generación de builds optimizados y publicación de releases en Google Play Store y Apple App Store. El resultado fue una app robusta, estable y lista para escalar en producción.",
+    image: "/projects/qi.jpeg",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Farmacia Marquez City",
+    description:
+      "E-commerce farmacéutico orientado a la venta online de medicamentos y productos de salud, con catálogo dinámico, carrito de compras, pagos online y gestión de pedidos. Diseñado para ofrecer una experiencia de compra simple, segura y confiable.",
+    link: "https://farmaciamarquezcity.com/",
+    image: "/projects/farmacia marquez city.png",
+    tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
+  },
+  {
+    title: "App Android de despacho con QR",
+    description:
+      "Aplicación Android para operaciones logísticas que permite escanear remitos mediante QR, registrar información de despacho y sincronizar datos en tiempo real. Pensada para agilizar procesos y mejorar la trazabilidad.",
+    image: "/projects/formulario.png",
+    tags: [TAGS.REACT],
   },
 ]
 ---
@@ -84,47 +161,59 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        {/* IMAGEN */}
+        <div class="w-full md:w-1/2">
+          <div class="relative overflow-hidden rounded-xl shadow-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            {/* 🔒 Ratio fijo para TODAS las imágenes */}
+            <div class="relative w-full aspect-video">
+              <img
+                alt={title}
+                src={image}
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-cover object-center transition duration-500 md:scale-110 md:group-hover:scale-105"
+              />
+            </div>
+
+          </div>
+        </div>
+
+        {/* TEXTO */}
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+
+      </article>
     ))
   }
 </div>
-
-
-
