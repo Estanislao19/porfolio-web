@@ -80,6 +80,38 @@ const PROJECTS = [
   tags: [TAGS.NEXTS, TAGS.TAILWIND],
 },
 {
+  title: "IMPULSA – Plataforma Digital para Negocios y Captación de Leads",
+  description:
+    "Plataforma web desarrollada para IMPULSA, una agencia enfocada en potenciar negocios mediante soluciones de marketing, desarrollo y diseño digital. El proyecto incluye una Home corporativa, páginas especializadas de Marketing, Desarrollo, Diseño y Proyectos, formularios interactivos de diagnóstico y captación de leads, integración directa con WhatsApp y Google Calendar para agendar reuniones, APIs internas y persistencia de información mediante Prisma y PostgreSQL. La solución fue desarrollada con Next.js, React, TypeScript y Tailwind CSS, con una experiencia responsive optimizada para desktop, tablet y dispositivos móviles, y desplegada en Netlify con configuración de variables de entorno y servicios backend.",
+  link: "https://effervescent-pithivier-461217.netlify.app/",
+  image: "/projects/impulsa.png",
+  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
+},
+{
+  title: "LazaroCode – Soluciones Digitales y Desarrollo de Software",
+  description:
+    "Proyecto tecnológico enfocado en crear soluciones digitales a medida para empresas, emprendimientos y profesionales. LazaroCode combina desarrollo web y mobile, e-commerce, automatización de procesos, integraciones con sistemas empresariales e inteligencia artificial para transformar necesidades de negocio en productos digitales funcionales. El enfoque abarca desde sitios orientados a captación y ventas hasta plataformas, sistemas de gestión y herramientas personalizadas, acompañando cada proyecto desde la idea inicial hasta su implementación y evolución.",
+  link: "https://lazarocode.com/",
+  image: "/projects/lazarocode.png",
+  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
+},
+{
+  title: "Mano a Mano – Marketplace Mobile de Servicios",
+  description:
+    "Aplicación móvil desarrollada para Android e iOS que conecta personas que necesitan resolver tareas o contratar servicios con prestadores disponibles en su zona. La plataforma permite explorar servicios sin necesidad de registrarse, buscar por categorías y ubicación, publicar necesidades, enviar solicitudes directas, recibir propuestas, seleccionar prestadores y gestionar acuerdos de trabajo. También incorpora perfiles públicos, reputación y reseñas, disponibilidad y coordinación de horarios, chat entre las partes, notificaciones, soporte y carga de evidencias mediante cámara o galería. La solución fue desarrollada con React Native, Expo y TypeScript, integrada con una arquitectura backend de servicios independientes para autenticación, operaciones principales, chat, notificaciones y procesamiento multimedia, con testing automatizado, QA en dispositivos físicos y preparación de builds para Android e iOS.",
+  image: "/projects/mano-a-mano.png",
+  tags: [TAGS.REACT, TAGS.TAILWIND],
+},
+
+{
+  title: "MudarExpress – Plataforma Digital de Mudanzas y Logística",
+  description:
+    "Plataforma digital diseñada para transformar la experiencia de contratar y planificar una mudanza. La solución presenta rutas y servicios de forma dinámica, con especial foco en traslados entre Patagonia, Buenos Aires, Tierra del Fuego y Ushuaia, además de cobertura nacional e internacional. Incorpora mudanzas compartidas para optimizar espacio y costos, visualización interactiva de recorridos, avisos de oportunidades en ruta, experiencias de clientes y un asistente integrado que acompaña al usuario desde la consulta inicial hasta el contacto con la empresa.",
+  image: "/projects/mudarexpress.png",
+  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
+  link: "https://sunny-fudge-f43b49.netlify.app/",
+},
+{
     title: "Groove (Fest-Go)",
     description:
       "Plataforma SaaS para la gestión de eventos y venta de tickets online. Permite crear eventos, administrar tandas de entradas, procesar ventas y validar accesos mediante QR. Diseñada como un sistema escalable, seguro y orientado a alto volumen de usuarios.",
@@ -91,7 +123,6 @@ const PROJECTS = [
     title: "Sistema de Barras Groove (Fest-Go Gest)",
     description:
       "Plataforma web para la gestión integral de barras en eventos, discotecas y festivales. Permite administrar usuarios por rol (Admin y Bartender), productos, stock, gastos y múltiples barras por evento. Incluye generación de tickets con impresión térmica, control de stock por barra, reportes, auditorías y métricas en tiempo real sobre una arquitectura API REST modular.",
-    link: "https://festgogest.com/",
     image: "/projects/bartender.png",
     tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
   },
@@ -101,7 +132,6 @@ const PROJECTS = [
       "Backend/API REST documentada (OAS 3.0) para la gestión integral de restaurantes y barras en eventos: mesas, pedidos, inventario con proveedores, reservas con CRM, empleados y roles, facturación y reportes. Incluye autenticación JWT (Bearer), auditoría completa, dashboard en tiempo real, reportes PDF/Excel e integración con impresión térmica ESC/POS. Arquitectura modular con NestJS + TypeScript y DynamoDB en AWS, con validación de datos, configuración centralizada y paginación estándar (page/limit) para endpoints de listas.",
     image: "/projects/sistemabar.png",
     tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
-    link: "https://festgo-bar.com/",
   },
   {
     title: "App Turística Multiplataforma (Flutter) – MVP",
@@ -116,6 +146,30 @@ const PROJECTS = [
     "Sitio web corporativo y catálogo digital desarrollado en WordPress para una ferretería, orientado a la presentación de productos, servicios y solicitudes de cotización. El proyecto incluye Home, páginas internas, catálogo WooCommerce, categorías de productos, ficha de producto, formularios, sección de contratistas, shopper virtual, blog, área Mi Cuenta y diseño responsive. Se integraron funcionalidades B2B con B2BKing, catálogo interactivo con DearFlip y gestión de empleos con WP Job Manager, manteniendo una identidad visual profesional y una experiencia optimizada para desktop y mobile.",
   link: "https://nivaxel.site/ferreteriacandelaria/",
   image: "/projects/ferreteria-candelaria.png",
+  tags: [TAGS.WORDPRESS],
+},
+{
+  title: "Fundación Mujeres Emprendedoras – Plataforma Web y CMS",
+  description:
+    "Plataforma web institucional desarrollada para la Fundación Mujeres Emprendedoras Santa Fe, orientada a fortalecer su comunidad y centralizar la gestión de contenidos. Incluye sitio público responsive, directorio de socias, capacitaciones, alianzas, colaboradores, proyectos, eventos y beneficios exclusivos, junto con un panel administrativo propio para gestionar la información sin necesidad de modificar código. La solución integra autenticación, base de datos y almacenamiento con Supabase, permisos mediante RLS, gestión dinámica de convenios y descuentos, carga de imágenes, filtros, SEO y despliegue productivo en Netlify.",
+  link: "https://fme-santa-fe.netlify.app/",
+  image: "/projects/fme-santa-fe.png",
+  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
+},
+{
+  title: "Dr. Gabriel Hernández De Rubín – Sitio Web Médico Especializado",
+  description:
+    "Sitio web profesional desarrollado para un especialista en Angiología, Cirugía Vascular y Endovascular, enfocado en transmitir confianza, autoridad médica y facilitar la captación de pacientes. La plataforma incluye presentación profesional, páginas de padecimientos vasculares, recursos educativos, segunda opinión médica, ubicaciones de consultorios con acceso a Google Maps, contacto directo por WhatsApp, perfil de Doctoralia, participaciones en medios y diseño responsive optimizado para desktop y dispositivos móviles. El proyecto fue desarrollado con Next.js y una arquitectura orientada a rendimiento, claridad de contenidos, accesibilidad y conversión.",
+  link: "https://frolicking-entremet-1ad7f8.netlify.app/",
+  image: "/projects/dr-gabriel-hernandez.png",
+  tags: [TAGS.NEXTS, TAGS.TAILWIND],
+},
+{
+  title: "Konekta Hub PR – Comunidad, Recursos y Oportunidades",
+  description:
+    "Sitio web desarrollado en WordPress para una plataforma orientada a conectar jóvenes con recursos, orientación, comunidad y oportunidades en Puerto Rico. El proyecto incluyó la implementación de la Home y páginas internas siguiendo un Site Map, wireframe y dirección visual previamente aprobados, con navegación completa, sección de noticias con filtrado por categorías, recursos, programas, llamados a la acción y una experiencia responsive optimizada para desktop, tablet y mobile. También se trabajó en identidad visual, jerarquía de contenidos, componentes reutilizables, microinteracciones, navegación mobile y ajustes generales de QA para dejar el sitio funcional y listo para revisión.",
+  link: "https://nivaxel.site/konekta/",
+  image: "/projects/konekta-hub-pr.png",
   tags: [TAGS.WORDPRESS],
 },
   {
@@ -141,13 +195,44 @@ const PROJECTS = [
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
+  title: "Meraki Veterinaria – Web Veterinaria 24 hs",
+  description:
+    "Sitio web desarrollado para una veterinaria de Santa Fe, enfocado en presentar sus servicios y facilitar el contacto inmediato con clientes. Incluye información institucional, atención de urgencias e internación 24 hs, accesos directos a WhatsApp para consultas y turnos, llamados a la acción y una experiencia responsive optimizada para desktop y dispositivos móviles.",
+  link: "https://meraki-veterinaria.pages.dev/",
+  image: "/projects/meraki-veterinaria.png",
+  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
+},
+  {
     title: "Farmacia Marquez City",
     description:
       "E-commerce farmacéutico orientado a la venta online de medicamentos y productos de salud, con catálogo dinámico, carrito de compras, pagos online y gestión de pedidos. Diseñado para ofrecer una experiencia de compra simple, segura y confiable.",
-    link: "https://farmaciamarquezcity.com/",
+    
     image: "/projects/farmacia marquez city.png",
     tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
   },
+  {
+  title: "Distribuidora El 17 – Sistema de Gestión de Inventario y Ventas",
+  description:
+    "Sistema web integral desarrollado a medida para digitalizar y centralizar la operación de una distribuidora. La plataforma incluye Punto de Venta (POS) con soporte para lectores de códigos de barras, gestión de productos, categorías, marcas y proveedores, control de stock independiente entre local y depósito, transferencias de mercadería, registro de compras y ventas, lotes y fechas de vencimiento, administración de precios e historial de movimientos. También incorpora autenticación con roles diferenciados para administradores y vendedores, impresión de tickets de venta y etiquetas de precios. Desarrollado con Next.js, React, TypeScript, PostgreSQL y Prisma, con una arquitectura Full Stack orientada a automatizar procesos, mejorar la trazabilidad del inventario y agilizar la operación diaria del negocio.",
+  image: "/projects/distribuidora-el17.png",
+  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
+},
+{
+  title: "Lady Fashion Fit – Optimización E-commerce en Shopify",
+  description:
+    "Optimización integral de una tienda Shopify de moda femenina con foco en conversión, experiencia de compra y rendimiento comercial. El proyecto incluyó auditoría del funnel de ventas y checkouts abandonados, optimización de fichas de producto y copywriting orientado a conversión, mejoras de confianza y logística, análisis de reseñas y prueba social, revisión de Shopify Markets y métodos de pago, además de QA mobile-first. También se trabajó sobre estrategias de cross-selling, AOV y optimización del recorrido desde la ficha de producto hasta el checkout.",
+  link: "https://ladyfashionfit.com/",
+  image: "/projects/lady-fashion-fit.png",
+  tags: [],
+},
+  {
+  title: "Nabra MX – E-commerce de Calzado Femenino",
+  description:
+    "Tienda online desarrollada para una marca mexicana de calzado femenino, enfocada en ofrecer una experiencia de compra moderna, intuitiva y orientada a la conversión. La plataforma incluye catálogo de productos con variantes, carrito de compras, pasarela de pago y cálculo de envíos en tiempo real según la ubicación del cliente. También se trabajó en la optimización del flujo de compra, la navegación del catálogo, el diseño responsive y la administración de productos, pedidos y stock desde una solución escalable y fácil de gestionar.",
+  link: "https://nabra.mx/",
+  image: "/projects/nabra-mx.png",
+  tags: [TAGS.NEXTS, TAGS.TAILWIND],
+},
   {
     title: "App Android de despacho con QR",
     description:
