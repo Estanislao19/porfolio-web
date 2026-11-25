@@ -1,54 +1,34 @@
 ---
-const personalImageAlt = "Miguel Ángel"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
+import { projects } from "@/data-projects";
+import imageSourceManifest from "@/data/project-image-sources.json";
+import BrandLogo from "@/components/BrandLogo.astro";
+const imageSources: Record<string, { width: number; height: number; srcset: string }> = imageSourceManifest;
+const featuredImage = (title: string, fallback: string) => { const source = projects.find((project) => project.title.includes(title))?.image ?? fallback; return { source, ...imageSources[source] }; };
+const images = {
+  dashboard: featuredImage("Dashboard Laikad – v2", "/projects/optimized/nuevo-front.webp"),
+  mobile: featuredImage("Mano a Mano", "/projects/optimized/mano-a-mano.webp"),
+  web: featuredImage("Tony Refrigeración", "/projects/optimized/tony-refrigeracion.webp"),
+};
 ---
-
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="/devv-techh.png"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://www.linkedin.com/in/estanislao-valdez-a6630b236/"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
-    >
-      <Badge>Disponible para trabajar</Badge>
-    </a>
+<div class="grid items-center gap-12 lg:grid-cols-[1.08fr_.92fr] xl:gap-16">
+  <div class="max-w-3xl py-4">
+    <div class="mb-7 inline-flex items-center gap-3"><BrandLogo variant="wordmark" alt="Dev-Tech" width={570} height={71} class="h-6 w-40 sm:w-44" /><span class="text-sm font-semibold tracking-wide text-slate-600 dark:text-slate-300">Tecnología con propósito para empresas</span></div>
+    <p class="mb-5 text-xs font-semibold uppercase tracking-[.22em] text-cyan-800 dark:text-cyan-300">Estrategia <span class="mx-1 text-slate-400">/</span> Diseño <span class="mx-1 text-slate-400">/</span> Desarrollo</p>
+    <h1 class="max-w-3xl text-4xl font-bold leading-[1.06] tracking-[-.04em] text-slate-950 dark:text-white sm:text-5xl lg:text-6xl xl:text-7xl">Transformamos ideas en <span class="bg-gradient-to-r from-cyan-700 via-sky-600 to-blue-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-sky-300 dark:to-blue-400">soluciones digitales.</span></h1>
+    <p class="mt-7 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg sm:leading-8">Desarrollamos sitios y aplicaciones móviles, sistemas empresariales, e-commerce y automatizaciones con inteligencia artificial. Acompañamos cada proyecto con comunicación cercana y criterio técnico.</p>
+    <div class="mt-9 flex flex-col gap-3 min-[380px]:flex-row">
+      <a href="#proyectos" class="inline-flex min-h-12 items-center justify-center rounded-full bg-slate-950 px-6 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-cyan-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 dark:bg-white dark:text-slate-950 dark:hover:bg-cyan-200">Ver proyectos <span class="ml-2" aria-hidden="true">↓</span></a>
+      <a href="#contacto" class="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-300 bg-white/70 px-6 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-cyan-600 hover:text-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 dark:border-slate-700 dark:bg-slate-900/60 dark:text-white dark:hover:text-cyan-200">Hablemos de tu proyecto <span class="ml-2" aria-hidden="true">↗</span></a>
+    </div>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Bienvenidos <br/>
-    somos Dev-Tech,<br/>
-    tu aliado<br/>
-    en el mundo digital.
-  </h1>
-  <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-  >
-  Somos una empresa apasionada por la innovación, especializada en ofrecer servicios digitales integrales: desde la creación de soluciones a medida, hasta la actualización y el mantenimiento de plataformas existentes. <strong
-      > Con más de 5 años de experiencia, en Dev-Tech combinamos creatividad, tecnología y compromiso para impulsar tu éxito en línea.</strong
-    > 
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto: devtech344@gmail.com">
-      <MailIcon class="size-4" />
-      <Badge>Contáctanos</Badge> 
-    </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/estanislao-valdez-a6630b236/">
-      <LinkedInIcon class="size-4" />
-      <Badge>LinkedIn</Badge>
-    </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/alexis-correa-dev/">
-      <LinkedInIcon class="size-4" />
-      <Badge>LinkedIn</Badge>
-    </SocialPill>
-  </nav>
+  <div class="relative mx-auto w-full max-w-xl pb-12 pt-2 lg:pb-14 lg:pt-6">
+    <div class="absolute inset-8 rounded-full bg-cyan-300/20 blur-3xl dark:bg-cyan-700/15" aria-hidden="true"></div>
+    <figure class="relative z-10 w-[78%] overflow-hidden rounded-2xl border border-white/80 bg-white p-2 shadow-2xl shadow-slate-950/15 dark:border-slate-700 dark:bg-slate-900" style="animation: float-soft 8s ease-in-out infinite"><img src={images.dashboard.source} alt="Dashboard de campañas Laikad" srcset={images.dashboard.srcset} sizes="(min-width: 1024px) 45vw, 90vw" width={images.dashboard.width} height={images.dashboard.height} fetchpriority="high" class="aspect-[16/10] w-full rounded-xl object-cover object-top"/><figcaption class="flex items-center justify-between px-2 pb-1 pt-3"><span class="text-xs font-semibold text-slate-800 dark:text-white">Dashboard empresarial</span><span class="rounded-full bg-cyan-50 px-2 py-1 text-[10px] font-medium text-cyan-900 dark:bg-cyan-950 dark:text-cyan-200">Web app</span></figcaption></figure>
+    <figure class="absolute right-0 top-[16%] z-20 w-[37%] overflow-hidden rounded-[1.7rem] border-[5px] border-slate-950 bg-slate-950 shadow-2xl shadow-slate-950/30 dark:border-slate-700" style="animation: float-soft 7s ease-in-out -2s infinite"><img src={images.mobile.source} alt="Captura de la aplicación móvil Mano a Mano" srcset={images.mobile.srcset} sizes="(min-width: 1024px) 18vw, 35vw" width={images.mobile.width} height={images.mobile.height} loading="eager" decoding="async" class="aspect-[9/16] w-full rounded-[1.25rem] bg-white object-contain"/><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-3 pb-3 pt-8 text-[10px] font-medium text-white">Aplicación móvil</figcaption></figure>
+    <figure class="relative z-30 ml-[16%] mt-[-3%] w-[70%] overflow-hidden rounded-xl border border-white/80 bg-white p-1.5 shadow-xl shadow-slate-950/15 dark:border-slate-700 dark:bg-slate-900" style="animation: float-soft 9s ease-in-out -4s infinite"><img src={images.web.source} alt="Sitio web corporativo de Tony Refrigeración" srcset={images.web.srcset} sizes="(min-width: 1024px) 40vw, 80vw" width={images.web.width} height={images.web.height} loading="lazy" decoding="async" class="aspect-[16/9] w-full rounded-lg object-cover object-top"/><figcaption class="px-2 py-2 text-[11px] font-semibold text-slate-800 dark:text-white">Plataforma web</figcaption></figure>
+    <span class="absolute bottom-1 left-[3%] z-40 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/95 px-3 py-2 text-[11px] font-medium text-slate-700 shadow-lg backdrop-blur dark:border-slate-700 dark:bg-slate-900/95 dark:text-slate-200"><span class="size-2 rounded-full bg-emerald-500" aria-hidden="true"></span>De la idea al producto</span>
+  </div>
 </div>
+<style>
+  @keyframes float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+</style>

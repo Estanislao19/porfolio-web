@@ -1,122 +1,30 @@
 ---
-import SunIcon from "./icons/Sun.astro"
-import MoonIcon from "./icons/Moon.astro"
-import SystemIcon from "./icons/System.astro"
-
-const THEMES = ["Light", "Dark", "System"]
+const themes = [{ value: "light", label: "Claro" }, { value: "dark", label: "Oscuro" }, { value: "system", label: "Sistema" }];
 ---
-
-<div class="relative ml-1 mr-1">
-  <button
-    transition:persist
-    id="theme-toggle-btn"
-    class="appearance-none border-none flex hover:scale-125 transition"
-  >
-    <span class="sr-only">Elige el tema</span>
-    <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
-    <MoonIcon
-      id="dark"
-      class="theme-toggle-icon absolute size-5 transition-all"
-    />
-    <SystemIcon
-      id="system"
-      class="theme-toggle-icon absolute size-5 transition-all"
-    />
-  </button>
-  <div
-    transition:persist
-    id="themes-menu"
-    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
-  >
-    <ul>
-      {
-        THEMES.map((theme) => (
-          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
-            {theme}
-          </li>
-        ))
-      }
-    </ul>
+<div class="relative">
+  <button id="theme-toggle-btn" type="button" class="grid size-10 place-items-center rounded-xl text-slate-700 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-600 dark:text-slate-200 dark:hover:bg-slate-800" aria-label="Cambiar tema" aria-haspopup="true" aria-expanded="false" aria-controls="themes-menu"><svg aria-hidden="true" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+  <div id="themes-menu" class="absolute right-0 top-12 z-50 hidden min-w-36 rounded-xl border border-slate-200 bg-white p-1.5 shadow-xl dark:border-slate-700 dark:bg-slate-900" role="menu" aria-label="Preferencia de tema">
+    {themes.map((theme) => <button class="theme-option block w-full rounded-lg px-3 py-2 text-left text-sm text-slate-700 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-600 dark:text-slate-200 dark:hover:bg-slate-800" type="button" role="menuitemradio" aria-checked="false" data-theme={theme.value}>{theme.label}</button>)}
   </div>
 </div>
-
-<style>
-  #themes-menu.open {
-    display: inline;
-    animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-
-  @keyframes scale-up-center {
-    from {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-</style>
-
 <script is:inline>
-  let remove = null
-  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)")
-  const themesMenu = document.getElementById("themes-menu")
-
-  const getThemePreference = () => {
-  if (typeof localStorage !== "undefined") {
-    return localStorage.getItem("theme") ?? "system"; // Si no hay preferencia, usa "system"
-  }
-  return "system";
-};
-
-const updateIcon = (themePreference) => {
-  if (!themePreference) themePreference = "dark"; // 🔹 Forzar dark si no hay preferencia
-  document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
-    element.style.scale = element.id === themePreference ? "1" : "0";
-  });
-};
-
-const updateTheme = () => {
-  if (remove != null) {
-    remove();
-  }
-  matchMedia.addEventListener("change", updateTheme);
-  remove = () => {
-    matchMedia.removeEventListener("change", updateTheme);
-  };
-
-  const themePreference = getThemePreference();
-
-  // 🔹 Si "system" está seleccionado, por defecto será oscuro
-  const isDark =
-    themePreference === "dark" ||
-    (themePreference === "system" && !localStorage.getItem("theme") && matchMedia.matches) ||
-    (themePreference === "system" && !matchMedia.matches);
-
-  updateIcon(themePreference);
-  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
-};
-  updateTheme()
-
-  document.addEventListener("click", () => themesMenu.classList.remove("open"))
-
-  document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
-    e.stopPropagation()
-    const isClosed = !themesMenu.classList.contains("open")
-    themesMenu.classList[isClosed ? "add" : "remove"]("open")
-  })
-
-  document.querySelectorAll(".themes-menu-option").forEach((element) => {
-    element.addEventListener("click", (e) => {
-      localStorage.setItem("theme", e.target.innerText.toLowerCase().trim())
-      updateTheme()
-    })
-  })
-
-  document.addEventListener('astro:after-swap', () => {
-    updateTheme();
-    window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
-  })
+  (() => {
+    const root = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const key = "theme";
+    const apply = (preference = localStorage.getItem(key) || "system") => {
+      const dark = preference === "dark" || (preference === "system" && media.matches);
+      root.classList.toggle("dark", dark);
+      root.style.colorScheme = dark ? "dark" : "light";
+      document.querySelectorAll(".theme-option").forEach((option) => option.setAttribute("aria-checked", String(option.dataset.theme === preference)));
+    };
+    const button = document.getElementById("theme-toggle-btn");
+    const menu = document.getElementById("themes-menu");
+    apply();
+    media.addEventListener("change", () => { if ((localStorage.getItem(key) || "system") === "system") apply("system"); });
+    button?.addEventListener("click", (event) => { event.stopPropagation(); const open = menu?.classList.toggle("hidden") === false; button.setAttribute("aria-expanded", String(open)); });
+    document.addEventListener("click", (event) => { if (!menu?.contains(event.target) && event.target !== button) { menu?.classList.add("hidden"); button?.setAttribute("aria-expanded", "false"); } });
+    document.addEventListener("keydown", (event) => { if (event.key === "Escape" && menu && !menu.classList.contains("hidden")) { menu.classList.add("hidden"); button?.setAttribute("aria-expanded", "false"); button?.focus(); } });
+    menu?.querySelectorAll(".theme-option").forEach((option) => option.addEventListener("click", () => { const theme = option.dataset.theme || "system"; localStorage.setItem(key, theme); apply(theme); menu.classList.add("hidden"); button?.setAttribute("aria-expanded", "false"); }));
+  })();
 </script>

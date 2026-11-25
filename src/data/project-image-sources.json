@@ -1,0 +1,142 @@
+{
+  "/projects/optimized/aventura.webp": {
+    "width": 499,
+    "height": 214,
+    "srcset": "/projects/optimized/aventura-480.webp 480w, /projects/optimized/aventura.webp 499w"
+  },
+  "/projects/optimized/bartender.webp": {
+    "width": 854,
+    "height": 1184,
+    "srcset": "/projects/optimized/bartender-480.webp 480w, /projects/optimized/bartender-768.webp 768w, /projects/optimized/bartender.webp 854w"
+  },
+  "/projects/optimized/bcm-app.webp": {
+    "width": 1080,
+    "height": 575,
+    "srcset": "/projects/optimized/bcm-app-480.webp 480w, /projects/optimized/bcm-app-768.webp 768w, /projects/optimized/bcm-app.webp 1080w"
+  },
+  "/projects/optimized/biocheck.webp": {
+    "width": 419,
+    "height": 181,
+    "srcset": "/projects/optimized/biocheck.webp 419w"
+  },
+  "/projects/optimized/dashh.webp": {
+    "width": 1861,
+    "height": 906,
+    "srcset": "/projects/optimized/dashh-480.webp 480w, /projects/optimized/dashh-768.webp 768w, /projects/optimized/dashh-1200.webp 1200w, /projects/optimized/dashh.webp 1861w"
+  },
+  "/projects/optimized/distribuidora-el17.webp": {
+    "width": 2550,
+    "height": 1243,
+    "srcset": "/projects/optimized/distribuidora-el17-480.webp 480w, /projects/optimized/distribuidora-el17-768.webp 768w, /projects/optimized/distribuidora-el17-1200.webp 1200w, /projects/optimized/distribuidora-el17.webp 2550w"
+  },
+  "/projects/optimized/dr-gabriel-hernandez.webp": {
+    "width": 2539,
+    "height": 1242,
+    "srcset": "/projects/optimized/dr-gabriel-hernandez-480.webp 480w, /projects/optimized/dr-gabriel-hernandez-768.webp 768w, /projects/optimized/dr-gabriel-hernandez-1200.webp 1200w, /projects/optimized/dr-gabriel-hernandez.webp 2539w"
+  },
+  "/projects/optimized/farmacia-marquez-city.webp": {
+    "width": 2536,
+    "height": 1237,
+    "srcset": "/projects/optimized/farmacia-marquez-city-480.webp 480w, /projects/optimized/farmacia-marquez-city-768.webp 768w, /projects/optimized/farmacia-marquez-city-1200.webp 1200w, /projects/optimized/farmacia-marquez-city.webp 2536w"
+  },
+  "/projects/optimized/ferreteria-candelaria.webp": {
+    "width": 1169,
+    "height": 1109,
+    "srcset": "/projects/optimized/ferreteria-candelaria-480.webp 480w, /projects/optimized/ferreteria-candelaria-768.webp 768w, /projects/optimized/ferreteria-candelaria.webp 1169w"
+  },
+  "/projects/optimized/festgo.webp": {
+    "width": 2560,
+    "height": 1234,
+    "srcset": "/projects/optimized/festgo-480.webp 480w, /projects/optimized/festgo-768.webp 768w, /projects/optimized/festgo-1200.webp 1200w, /projects/optimized/festgo.webp 2560w"
+  },
+  "/projects/optimized/flash-realty.webp": {
+    "width": 1372,
+    "height": 899,
+    "srcset": "/projects/optimized/flash-realty-480.webp 480w, /projects/optimized/flash-realty-768.webp 768w, /projects/optimized/flash-realty-1200.webp 1200w, /projects/optimized/flash-realty.webp 1372w"
+  },
+  "/projects/optimized/fme-santa-fe.webp": {
+    "width": 2036,
+    "height": 1144,
+    "srcset": "/projects/optimized/fme-santa-fe-480.webp 480w, /projects/optimized/fme-santa-fe-768.webp 768w, /projects/optimized/fme-santa-fe-1200.webp 1200w, /projects/optimized/fme-santa-fe.webp 2036w"
+  },
+  "/projects/optimized/formulario.webp": {
+    "width": 484,
+    "height": 340,
+    "srcset": "/projects/optimized/formulario-480.webp 480w, /projects/optimized/formulario.webp 484w"
+  },
+  "/projects/optimized/impulsa.webp": {
+    "width": 1483,
+    "height": 527,
+    "srcset": "/projects/optimized/impulsa-480.webp 480w, /projects/optimized/impulsa-768.webp 768w, /projects/optimized/impulsa-1200.webp 1200w, /projects/optimized/impulsa.webp 1483w"
+  },
+  "/projects/optimized/inspira.webp": {
+    "width": 1169,
+    "height": 792,
+    "srcset": "/projects/optimized/inspira-480.webp 480w, /projects/optimized/inspira-768.webp 768w, /projects/optimized/inspira.webp 1169w"
+  },
+  "/projects/optimized/konekta-hub-pr.webp": {
+    "width": 2536,
+    "height": 1000,
+    "srcset": "/projects/optimized/konekta-hub-pr-480.webp 480w, /projects/optimized/konekta-hub-pr-768.webp 768w, /projects/optimized/konekta-hub-pr-1200.webp 1200w, /projects/optimized/konekta-hub-pr.webp 2536w"
+  },
+  "/projects/optimized/lady-fashion-fit.webp": {
+    "width": 1021,
+    "height": 844,
+    "srcset": "/projects/optimized/lady-fashion-fit-480.webp 480w, /projects/optimized/lady-fashion-fit-768.webp 768w, /projects/optimized/lady-fashion-fit.webp 1021w"
+  },
+  "/projects/optimized/laikad-app.webp": {
+    "width": 1904,
+    "height": 903,
+    "srcset": "/projects/optimized/laikad-app-480.webp 480w, /projects/optimized/laikad-app-768.webp 768w, /projects/optimized/laikad-app-1200.webp 1200w, /projects/optimized/laikad-app.webp 1904w"
+  },
+  "/projects/optimized/lazarocode.webp": {
+    "width": 2105,
+    "height": 1196,
+    "srcset": "/projects/optimized/lazarocode-480.webp 480w, /projects/optimized/lazarocode-768.webp 768w, /projects/optimized/lazarocode-1200.webp 1200w, /projects/optimized/lazarocode.webp 2105w"
+  },
+  "/projects/optimized/mano-a-mano.webp": {
+    "width": 1080,
+    "height": 2355,
+    "srcset": "/projects/optimized/mano-a-mano-480.webp 480w, /projects/optimized/mano-a-mano-768.webp 768w, /projects/optimized/mano-a-mano.webp 1080w"
+  },
+  "/projects/optimized/meraki-veterinaria.webp": {
+    "width": 2161,
+    "height": 1231,
+    "srcset": "/projects/optimized/meraki-veterinaria-480.webp 480w, /projects/optimized/meraki-veterinaria-768.webp 768w, /projects/optimized/meraki-veterinaria-1200.webp 1200w, /projects/optimized/meraki-veterinaria.webp 2161w"
+  },
+  "/projects/optimized/mudarexpress.webp": {
+    "width": 1775,
+    "height": 1237,
+    "srcset": "/projects/optimized/mudarexpress-480.webp 480w, /projects/optimized/mudarexpress-768.webp 768w, /projects/optimized/mudarexpress-1200.webp 1200w, /projects/optimized/mudarexpress.webp 1775w"
+  },
+  "/projects/optimized/nabra-mx.webp": {
+    "width": 2547,
+    "height": 1231,
+    "srcset": "/projects/optimized/nabra-mx-480.webp 480w, /projects/optimized/nabra-mx-768.webp 768w, /projects/optimized/nabra-mx-1200.webp 1200w, /projects/optimized/nabra-mx.webp 2547w"
+  },
+  "/projects/optimized/nexo-charge.webp": {
+    "width": 2560,
+    "height": 1310,
+    "srcset": "/projects/optimized/nexo-charge-480.webp 480w, /projects/optimized/nexo-charge-768.webp 768w, /projects/optimized/nexo-charge-1200.webp 1200w, /projects/optimized/nexo-charge.webp 2560w"
+  },
+  "/projects/optimized/nuevo-front.webp": {
+    "width": 1896,
+    "height": 906,
+    "srcset": "/projects/optimized/nuevo-front-480.webp 480w, /projects/optimized/nuevo-front-768.webp 768w, /projects/optimized/nuevo-front-1200.webp 1200w, /projects/optimized/nuevo-front.webp 1896w"
+  },
+  "/projects/optimized/qi.webp": {
+    "width": 1024,
+    "height": 1024,
+    "srcset": "/projects/optimized/qi-480.webp 480w, /projects/optimized/qi-768.webp 768w, /projects/optimized/qi.webp 1024w"
+  },
+  "/projects/optimized/sistemabar.webp": {
+    "width": 2534,
+    "height": 1129,
+    "srcset": "/projects/optimized/sistemabar-480.webp 480w, /projects/optimized/sistemabar-768.webp 768w, /projects/optimized/sistemabar-1200.webp 1200w, /projects/optimized/sistemabar.webp 2534w"
+  },
+  "/projects/optimized/tony-refrigeracion.webp": {
+    "width": 2122,
+    "height": 1145,
+    "srcset": "/projects/optimized/tony-refrigeracion-480.webp 480w, /projects/optimized/tony-refrigeracion-768.webp 768w, /projects/optimized/tony-refrigeracion-1200.webp 1200w, /projects/optimized/tony-refrigeracion.webp 2122w"
+  }
+}

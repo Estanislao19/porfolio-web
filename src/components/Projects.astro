@@ -1,304 +1,54 @@
 ---
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-import Mongo from "./icons/mongo.astro"
-import NEXTS from "./icons/Estani.astro"
-import Websockets from "./icons/websocket.astro"
-import react from "./icons/react.astro"
-import wordpress from "./icons/wordpress.astro"
-
-const TAGS = {
-  NEXT: {
-    name: "Angular.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Node.js",
-    class: "bg-black text-white",
-    icon: Tailwind,
-  },
-  MONGO: {
-    name: "Mongodb",
-    class: "bg-black text-white",
-    icon: Mongo,
-  },
-  NEXTS: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NEXTS,
-  },
-  WEBSOCKETS: {
-    name: "Websockets",
-    class: "bg-black text-white",
-    icon: Websockets,
-  },
-  WORDPRESS: {
-    name: "Wordpress",
-    class: "bg-black text-white",
-    icon: wordpress,
-  },
-  REACT: {
-    name: "React.js",
-    class: "bg-black text-white",
-    icon: react,
-  },
-}
-
-const PROJECTS = [
-  {
-    title: "Dashboard Laikad – v2",
-    description:
-      "Evolución del panel de campañas con Next.js, enfocada en performance, UX y escalabilidad. Incorpora filtros avanzados, rankings y comunicación en tiempo real para un seguimiento más preciso del tráfico.",
-    image: "/projects/nuevo-front.png",
-    tags: [TAGS.NEXTS, TAGS.WEBSOCKETS],
-    link: "https://admin.laikad.com/app/#/app/dashboard/list",
-  },
-  {
-    title: "Dashboard Laikad – v1",
-    description:
-      "Dashboard de análisis de campañas desarrollado en AngularJS para el monitoreo de clics y métricas clave en tiempo real. Permite visualizar rendimiento de campañas y optimizar decisiones basadas en datos.",
-    image: "/projects/dashh.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGO],
-  },
-  {
-    title: "Website Laikad",
-    description:
-      "Sitio institucional de agencia de marketing digital, orientado a comunicar servicios, propuesta de valor y enfoque basado en análisis de datos y optimización de campañas.",
-    link: "https://laikad.com",
-    image: "/projects/laikad-app.png",
-    tags: [TAGS.WORDPRESS],
-  },
-  {
-  title: "Inspira – Ecosistema Digital de Transformación Personal",
-  description:
-    "Plataforma enfocada en el crecimiento humano y la construcción de hábitos positivos mediante una experiencia inmersiva basada en contenido educativo, seguimiento de objetivos y mecánicas de motivación. Inspira convierte el desarrollo personal en un recorrido dinámico donde el usuario puede avanzar, desbloquear logros y mantener la constancia a través de una experiencia diseñada para generar compromiso a largo plazo.",
-  link: "https://appinspira.com.mx/",
-  image: "/projects/inspira.png",
-  tags: [TAGS.NEXTS, TAGS.TAILWIND],
-},
-{
-  title: "IMPULSA – Plataforma Digital para Negocios y Captación de Leads",
-  description:
-    "Plataforma web desarrollada para IMPULSA, una agencia enfocada en potenciar negocios mediante soluciones de marketing, desarrollo y diseño digital. El proyecto incluye una Home corporativa, páginas especializadas de Marketing, Desarrollo, Diseño y Proyectos, formularios interactivos de diagnóstico y captación de leads, integración directa con WhatsApp y Google Calendar para agendar reuniones, APIs internas y persistencia de información mediante Prisma y PostgreSQL. La solución fue desarrollada con Next.js, React, TypeScript y Tailwind CSS, con una experiencia responsive optimizada para desktop, tablet y dispositivos móviles, y desplegada en Netlify con configuración de variables de entorno y servicios backend.",
-  link: "https://effervescent-pithivier-461217.netlify.app/",
-  image: "/projects/impulsa.png",
-  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
-},
-{
-  title: "LazaroCode – Soluciones Digitales y Desarrollo de Software",
-  description:
-    "Proyecto tecnológico enfocado en crear soluciones digitales a medida para empresas, emprendimientos y profesionales. LazaroCode combina desarrollo web y mobile, e-commerce, automatización de procesos, integraciones con sistemas empresariales e inteligencia artificial para transformar necesidades de negocio en productos digitales funcionales. El enfoque abarca desde sitios orientados a captación y ventas hasta plataformas, sistemas de gestión y herramientas personalizadas, acompañando cada proyecto desde la idea inicial hasta su implementación y evolución.",
-  link: "https://lazarocode.com/",
-  image: "/projects/lazarocode.png",
-  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
-},
-{
-  title: "Mano a Mano – Marketplace Mobile de Servicios",
-  description:
-    "Aplicación móvil desarrollada para Android e iOS que conecta personas que necesitan resolver tareas o contratar servicios con prestadores disponibles en su zona. La plataforma permite explorar servicios sin necesidad de registrarse, buscar por categorías y ubicación, publicar necesidades, enviar solicitudes directas, recibir propuestas, seleccionar prestadores y gestionar acuerdos de trabajo. También incorpora perfiles públicos, reputación y reseñas, disponibilidad y coordinación de horarios, chat entre las partes, notificaciones, soporte y carga de evidencias mediante cámara o galería. La solución fue desarrollada con React Native, Expo y TypeScript, integrada con una arquitectura backend de servicios independientes para autenticación, operaciones principales, chat, notificaciones y procesamiento multimedia, con testing automatizado, QA en dispositivos físicos y preparación de builds para Android e iOS.",
-  image: "/projects/mano-a-mano.png",
-  tags: [TAGS.REACT, TAGS.TAILWIND],
-},
-
-{
-  title: "MudarExpress – Plataforma Digital de Mudanzas y Logística",
-  description:
-    "Plataforma digital diseñada para transformar la experiencia de contratar y planificar una mudanza. La solución presenta rutas y servicios de forma dinámica, con especial foco en traslados entre Patagonia, Buenos Aires, Tierra del Fuego y Ushuaia, además de cobertura nacional e internacional. Incorpora mudanzas compartidas para optimizar espacio y costos, visualización interactiva de recorridos, avisos de oportunidades en ruta, experiencias de clientes y un asistente integrado que acompaña al usuario desde la consulta inicial hasta el contacto con la empresa.",
-  image: "/projects/mudarexpress.png",
-  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
-  link: "https://sunny-fudge-f43b49.netlify.app/",
-},
-{
-    title: "Groove (Fest-Go)",
-    description:
-      "Plataforma SaaS para la gestión de eventos y venta de tickets online. Permite crear eventos, administrar tandas de entradas, procesar ventas y validar accesos mediante QR. Diseñada como un sistema escalable, seguro y orientado a alto volumen de usuarios.",
-    link: "https://fest-go.com/",
-    image: "/projects/festgo.png",
-    tags: [TAGS.NEXTS, TAGS.TAILWIND],
-  },
-  {
-    title: "Sistema de Barras Groove (Fest-Go Gest)",
-    description:
-      "Plataforma web para la gestión integral de barras en eventos, discotecas y festivales. Permite administrar usuarios por rol (Admin y Bartender), productos, stock, gastos y múltiples barras por evento. Incluye generación de tickets con impresión térmica, control de stock por barra, reportes, auditorías y métricas en tiempo real sobre una arquitectura API REST modular.",
-    image: "/projects/bartender.png",
-    tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
-  },
-  {
-    title: "Fest-Go System Table – API de gestión de restaurantes y barras",
-    description:
-      "Backend/API REST documentada (OAS 3.0) para la gestión integral de restaurantes y barras en eventos: mesas, pedidos, inventario con proveedores, reservas con CRM, empleados y roles, facturación y reportes. Incluye autenticación JWT (Bearer), auditoría completa, dashboard en tiempo real, reportes PDF/Excel e integración con impresión térmica ESC/POS. Arquitectura modular con NestJS + TypeScript y DynamoDB en AWS, con validación de datos, configuración centralizada y paginación estándar (page/limit) para endpoints de listas.",
-    image: "/projects/sistemabar.png",
-    tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
-  },
-  {
-    title: "App Turística Multiplataforma (Flutter) – MVP",
-    description:
-      "MVP multiplataforma (Android/iOS) desarrollado en Flutter con alta fidelidad a diseño Figma. Incluye 12 pantallas clave (onboarding, login, feed, detalle, mapa, puntos y perfil), navegación fluida, arquitectura escalable, mocks JSON para simular servicios REST, soporte básico ES/EN y criterios mínimos de accesibilidad. Entrega compilable con pruebas funcionales, documentación de build y material de demo (capturas/video).",
-    image: "/projects/aventura.png",
-    tags: [TAGS.REACT],
-  },
-  {
-  title: "Ferretería Candelaria – Catálogo B2B en WordPress",
-  description:
-    "Sitio web corporativo y catálogo digital desarrollado en WordPress para una ferretería, orientado a la presentación de productos, servicios y solicitudes de cotización. El proyecto incluye Home, páginas internas, catálogo WooCommerce, categorías de productos, ficha de producto, formularios, sección de contratistas, shopper virtual, blog, área Mi Cuenta y diseño responsive. Se integraron funcionalidades B2B con B2BKing, catálogo interactivo con DearFlip y gestión de empleos con WP Job Manager, manteniendo una identidad visual profesional y una experiencia optimizada para desktop y mobile.",
-  link: "https://nivaxel.site/ferreteriacandelaria/",
-  image: "/projects/ferreteria-candelaria.png",
-  tags: [TAGS.WORDPRESS],
-},
-{
-  title: "Fundación Mujeres Emprendedoras – Plataforma Web y CMS",
-  description:
-    "Plataforma web institucional desarrollada para la Fundación Mujeres Emprendedoras Santa Fe, orientada a fortalecer su comunidad y centralizar la gestión de contenidos. Incluye sitio público responsive, directorio de socias, capacitaciones, alianzas, colaboradores, proyectos, eventos y beneficios exclusivos, junto con un panel administrativo propio para gestionar la información sin necesidad de modificar código. La solución integra autenticación, base de datos y almacenamiento con Supabase, permisos mediante RLS, gestión dinámica de convenios y descuentos, carga de imágenes, filtros, SEO y despliegue productivo en Netlify.",
-  link: "https://fme-santa-fe.netlify.app/",
-  image: "/projects/fme-santa-fe.png",
-  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
-},
-{
-  title: "Dr. Gabriel Hernández De Rubín – Sitio Web Médico Especializado",
-  description:
-    "Sitio web profesional desarrollado para un especialista en Angiología, Cirugía Vascular y Endovascular, enfocado en transmitir confianza, autoridad médica y facilitar la captación de pacientes. La plataforma incluye presentación profesional, páginas de padecimientos vasculares, recursos educativos, segunda opinión médica, ubicaciones de consultorios con acceso a Google Maps, contacto directo por WhatsApp, perfil de Doctoralia, participaciones en medios y diseño responsive optimizado para desktop y dispositivos móviles. El proyecto fue desarrollado con Next.js y una arquitectura orientada a rendimiento, claridad de contenidos, accesibilidad y conversión.",
-  link: "https://frolicking-entremet-1ad7f8.netlify.app/",
-  image: "/projects/dr-gabriel-hernandez.png",
-  tags: [TAGS.NEXTS, TAGS.TAILWIND],
-},
-{
-  title: "Konekta Hub PR – Comunidad, Recursos y Oportunidades",
-  description:
-    "Sitio web desarrollado en WordPress para una plataforma orientada a conectar jóvenes con recursos, orientación, comunidad y oportunidades en Puerto Rico. El proyecto incluyó la implementación de la Home y páginas internas siguiendo un Site Map, wireframe y dirección visual previamente aprobados, con navegación completa, sección de noticias con filtrado por categorías, recursos, programas, llamados a la acción y una experiencia responsive optimizada para desktop, tablet y mobile. También se trabajó en identidad visual, jerarquía de contenidos, componentes reutilizables, microinteracciones, navegación mobile y ajustes generales de QA para dejar el sitio funcional y listo para revisión.",
-  link: "https://nivaxel.site/konekta/",
-  image: "/projects/konekta-hub-pr.png",
-  tags: [TAGS.WORDPRESS],
-},
-  {
-  title: "Flash Realty – Plataforma Inmobiliaria",
-  description:
-    "Sitio web inmobiliario orientado a fortalecer la presencia digital de la marca y generar oportunidades comerciales. La plataforma presenta servicios de venta, alquiler y administración de propiedades, integra secciones de propiedades destacadas, testimonios, preguntas frecuentes, formularios de contacto y accesos directos a canales de comunicación. Diseñada para transmitir confianza, facilitar la navegación y convertir visitantes en potenciales clientes.",
-  link: "https://nivaxel.site/flash/",
-  image: "/projects/flash-realty.png",
-  tags: [TAGS.WORDPRESS],
-},
-{
-  title: "BCM App – Migración de Seguridad Mobile Cordova",
-  description:
-    "Migración de seguridad crítica y modernización de una aplicación móvil empresarial desarrollada en Cordova/PhoneGap para Android e iOS. El proyecto incluyó almacenamiento seguro de credenciales con Secure Storage, refactorización del login y logout, adaptación de flujos críticos de órdenes de trabajo, altas, cambios de domicilio, modificación de conexión y equipamiento. También se optimizó el aprovisionamiento de equipos CPE/ONT, validación de potencia óptica, configuración WiFi, test de velocidad, persistencia de datos entre pantallas e integración con APIs REST del backend BCM, manteniendo la compatibilidad funcional de una app productiva.",
-  image: "/projects/bcm-app.png",
-  tags: [TAGS.REACT, TAGS.TAILWIND],
-},
-  {
-    title: "Optimización y Deploy de Apps Mobile (Android & iOS)",
-    description:
-      "Proyecto de desarrollo, optimización y estabilización de una aplicación mobile completa para Android e iOS. Incluyó análisis técnico y funcional, mejora de arquitectura, optimización de código y performance, resolución de errores críticos, implementación de buenas prácticas, testing integral (QA), generación de builds optimizados y publicación de releases en Google Play Store y Apple App Store. El resultado fue una app robusta, estable y lista para escalar en producción.",
-    image: "/projects/qi.jpeg",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
-  },
-  {
-  title: "Meraki Veterinaria – Web Veterinaria 24 hs",
-  description:
-    "Sitio web desarrollado para una veterinaria de Santa Fe, enfocado en presentar sus servicios y facilitar el contacto inmediato con clientes. Incluye información institucional, atención de urgencias e internación 24 hs, accesos directos a WhatsApp para consultas y turnos, llamados a la acción y una experiencia responsive optimizada para desktop y dispositivos móviles.",
-  link: "https://meraki-veterinaria.pages.dev/",
-  image: "/projects/meraki-veterinaria.png",
-  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
-},
-  {
-    title: "Farmacia Marquez City",
-    description:
-      "E-commerce farmacéutico orientado a la venta online de medicamentos y productos de salud, con catálogo dinámico, carrito de compras, pagos online y gestión de pedidos. Diseñado para ofrecer una experiencia de compra simple, segura y confiable.",
-    
-    image: "/projects/farmacia marquez city.png",
-    tags: [TAGS.TAILWIND, TAGS.MONGO, TAGS.NEXTS],
-  },
-  {
-  title: "Distribuidora El 17 – Sistema de Gestión de Inventario y Ventas",
-  description:
-    "Sistema web integral desarrollado a medida para digitalizar y centralizar la operación de una distribuidora. La plataforma incluye Punto de Venta (POS) con soporte para lectores de códigos de barras, gestión de productos, categorías, marcas y proveedores, control de stock independiente entre local y depósito, transferencias de mercadería, registro de compras y ventas, lotes y fechas de vencimiento, administración de precios e historial de movimientos. También incorpora autenticación con roles diferenciados para administradores y vendedores, impresión de tickets de venta y etiquetas de precios. Desarrollado con Next.js, React, TypeScript, PostgreSQL y Prisma, con una arquitectura Full Stack orientada a automatizar procesos, mejorar la trazabilidad del inventario y agilizar la operación diaria del negocio.",
-  image: "/projects/distribuidora-el17.png",
-  tags: [TAGS.NEXTS, TAGS.REACT, TAGS.TAILWIND],
-},
-{
-  title: "Lady Fashion Fit – Optimización E-commerce en Shopify",
-  description:
-    "Optimización integral de una tienda Shopify de moda femenina con foco en conversión, experiencia de compra y rendimiento comercial. El proyecto incluyó auditoría del funnel de ventas y checkouts abandonados, optimización de fichas de producto y copywriting orientado a conversión, mejoras de confianza y logística, análisis de reseñas y prueba social, revisión de Shopify Markets y métodos de pago, además de QA mobile-first. También se trabajó sobre estrategias de cross-selling, AOV y optimización del recorrido desde la ficha de producto hasta el checkout.",
-  link: "https://ladyfashionfit.com/",
-  image: "/projects/lady-fashion-fit.png",
-  tags: [],
-},
-  {
-  title: "Nabra MX – E-commerce de Calzado Femenino",
-  description:
-    "Tienda online desarrollada para una marca mexicana de calzado femenino, enfocada en ofrecer una experiencia de compra moderna, intuitiva y orientada a la conversión. La plataforma incluye catálogo de productos con variantes, carrito de compras, pasarela de pago y cálculo de envíos en tiempo real según la ubicación del cliente. También se trabajó en la optimización del flujo de compra, la navegación del catálogo, el diseño responsive y la administración de productos, pedidos y stock desde una solución escalable y fácil de gestionar.",
-  link: "https://nabra.mx/",
-  image: "/projects/nabra-mx.png",
-  tags: [TAGS.NEXTS, TAGS.TAILWIND],
-},
-  {
-    title: "App Android de despacho con QR",
-    description:
-      "Aplicación Android para operaciones logísticas que permite escanear remitos mediante QR, registrar información de despacho y sincronizar datos en tiempo real. Pensada para agilizar procesos y mejorar la trazabilidad.",
-    image: "/projects/formulario.png",
-    tags: [TAGS.REACT],
-  },
-]
+import { projects } from "@/data-projects";
+import imageSourceManifest from "@/data/project-image-sources.json";
+const imageSources: Record<string, { width: number; height: number; srcset: string }> = imageSourceManifest;
+const featuredOrder = projects.filter((project) => project.featured).sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99)).map((project) => project.title);
+const catalogProjects = [...projects.filter((project) => project.featured).sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99)), ...projects.filter((project) => !project.featured)];
+const categories = ["Todos", ...new Set(projects.map((project) => project.category))];
+const summaryLimit = 148;
+const summaryFor = (description: string) => { if (description.length <= summaryLimit) return description; const boundary = description.lastIndexOf(" ", summaryLimit); return `${description.slice(0, boundary > 0 ? boundary : summaryLimit)}…`; };
+const detailsFor = (description: string) => { const boundary = description.lastIndexOf(" ", summaryLimit); return description.slice(boundary > 0 ? boundary + 1 : summaryLimit).trimStart(); };
 ---
-
-<div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, link }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-
-        {/* IMAGEN */}
-        <div class="w-full md:w-1/2">
-          <div class="relative overflow-hidden rounded-xl shadow-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-
-            {/* 🔒 Ratio fijo para TODAS las imágenes */}
-            <div class="relative w-full aspect-video">
-              <img
-                alt={title}
-                src={image}
-                loading="lazy"
-                class="absolute inset-0 w-full h-full object-cover object-center transition duration-500 md:scale-110 md:group-hover:scale-105"
-              />
-            </div>
-
-          </div>
-        </div>
-
-        {/* TEXTO */}
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
-              {tags.map((tag) => (
-                <li>
-                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                    <tag.icon class="size-4" />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              {description}
-            </div>
-
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {link && (
-                <LinkButton href={link}>
-                  <Link class="size-4" />
-                  Preview
-                </LinkButton>
-              )}
-            </footer>
-          </div>
-        </div>
-
-      </article>
-    ))
-  }
+<div class="mb-8 flex flex-wrap gap-2" aria-label="Filtrar proyectos por categoría">
+  {categories.map((category) => <button class="project-filter rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-cyan-500 hover:text-cyan-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 aria-pressed:border-slate-950 aria-pressed:bg-slate-950 aria-pressed:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-cyan-200 dark:aria-pressed:border-cyan-300 dark:aria-pressed:bg-cyan-300 dark:aria-pressed:text-slate-950" data-filter={category} aria-pressed={category === "Todos"}>{category}</button>)}
 </div>
+<div class="grid auto-rows-fr gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4" id="projects-grid">
+  {catalogProjects.map((project) => <article class="project-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900/60" data-category={project.category} data-featured={project.featured ? "true" : "false"} data-search-title={project.title.toLowerCase()} data-featured-index={featuredOrder.indexOf(project.title)} style={!project.featured ? "display:none" : undefined} data-featured-order={project.featuredOrder ?? 99}>
+    <button class="project-image relative flex h-48 w-full shrink-0 cursor-zoom-in items-center justify-center overflow-hidden bg-slate-100 p-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-cyan-600 dark:bg-slate-800 sm:h-52" type="button" aria-label={`Ampliar imagen del proyecto ${project.title}`} data-image={project.image ?? ""} data-title={project.title}>
+      {project.image ? <img src={project.image} srcset={imageSources[project.image]?.srcset} sizes="(min-width: 1536px) 20vw, (min-width: 1280px) 28vw, (min-width: 640px) 45vw, 100vw" width={imageSources[project.image]?.width} height={imageSources[project.image]?.height} alt={`Captura de ${project.title}`} loading="lazy" decoding="async" class={`h-full w-full transition duration-500 group-hover:scale-[1.025] ${project.category === "Aplicaciones móviles" ? "object-contain" : "object-cover"}`} /> : <span class="text-sm text-slate-500">Imagen no disponible</span>}
+      <span class="absolute bottom-3 right-3 rounded-full bg-slate-950/80 px-3 py-2 text-xs font-semibold text-white opacity-100 shadow-md transition sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100">Ampliar imagen ↗</span>
+    </button>
+    <div class="flex flex-1 flex-col p-5">
+      <p class="mb-2 text-[11px] font-semibold uppercase tracking-[.16em] text-cyan-800 dark:text-cyan-300">{project.category}</p>
+      <h3 class="text-base font-semibold leading-snug text-slate-950 dark:text-white">{project.title}</h3>
+      {project.status && <p class="mt-2 w-fit rounded-full border border-cyan-200 bg-cyan-50 px-2.5 py-1 text-[11px] font-semibold text-cyan-900 dark:border-cyan-900 dark:bg-cyan-950/60 dark:text-cyan-200">{project.status}</p>}
+      <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{summaryFor(project.description)}</p>
+      {project.technologies.length > 0 && <ul class="mt-4 flex flex-wrap gap-1.5">{project.technologies.slice(0, 5).map((technology) => <li class="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">{technology}</li>)}</ul>}
+      {project.description.length > summaryLimit && <details class="project-details mt-auto pt-4 text-sm text-cyan-800 dark:text-cyan-300"><summary class="cursor-pointer font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-600">Ver más detalles</summary><p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{detailsFor(project.description)}</p></details>}
+      {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex min-h-10 w-fit items-center rounded-full border border-slate-300 px-4 text-xs font-semibold text-slate-800 transition hover:border-cyan-600 hover:text-cyan-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-600 dark:border-slate-700 dark:text-white dark:hover:text-cyan-200" aria-label={`Visitar enlace del proyecto ${project.title}`}>Visitar proyecto <span aria-hidden="true" class="ml-2">↗</span></a>}
+    </div>
+  </article>)}
+</div>
+<div class="mt-9 text-center"><button id="show-all-projects" class="rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-cyan-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 dark:bg-white dark:text-slate-950 dark:hover:bg-cyan-200">Ver catálogo completo ({projects.length})</button></div>
+<dialog id="project-image-dialog" class="m-auto max-h-[92dvh] max-w-[94vw] overflow-hidden rounded-2xl border border-slate-200 bg-white p-0 text-slate-900 shadow-2xl backdrop:bg-slate-950/85 dark:border-slate-700 dark:bg-slate-900 dark:text-white" aria-labelledby="project-dialog-title"><div class="flex items-center justify-between gap-4 p-3 sm:p-4"><h3 id="project-dialog-title" class="text-sm font-semibold"></h3><button id="close-project-dialog" type="button" class="grid size-10 shrink-0 place-items-center rounded-full border border-slate-300 text-lg hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-600 dark:border-slate-700 dark:hover:bg-slate-800" aria-label="Cerrar imagen">×</button></div><img id="project-dialog-image" alt="" class="max-h-[calc(92dvh-4rem)] max-w-[94vw] object-contain" /></dialog>
+<script>
+  const cards = [...document.querySelectorAll<HTMLElement>(".project-card")];
+  const filters = [...document.querySelectorAll<HTMLButtonElement>(".project-filter")];
+  const showAll = document.querySelector<HTMLButtonElement>("#show-all-projects");
+  const dialog = document.querySelector<HTMLDialogElement>("#project-image-dialog");
+  const dialogImage = document.querySelector<HTMLImageElement>("#project-dialog-image");
+  const dialogTitle = document.querySelector<HTMLElement>("#project-dialog-title");
+  let expanded = false;
+  let active = "Todos";
+  const render = () => {
+    cards.forEach((card) => { card.style.display = active === "Todos" && (expanded || card.dataset.featured === "true") || active !== "Todos" && card.dataset.category === active ? "" : "none"; });
+    filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === active)));
+    if (showAll) showAll.textContent = active !== "Todos" ? "Ver todos los proyectos" : expanded ? "Mostrar proyectos destacados" : `Ver catálogo completo (${cards.length})`;
+  };
+  filters.forEach((button) => button.addEventListener("click", () => { active = button.dataset.filter ?? "Todos"; render(); }));
+  showAll?.addEventListener("click", () => { if (active !== "Todos") expanded = true; else expanded = !expanded; active = "Todos"; render(); });
+  document.querySelectorAll<HTMLButtonElement>(".project-image").forEach((button) => button.addEventListener("click", () => { const src = button.dataset.image; if (!src || !dialog || !dialogImage) return; dialogImage.src = src; dialogImage.alt = `Imagen ampliada: ${button.dataset.title ?? "proyecto"}`; if (dialogTitle) dialogTitle.textContent = button.dataset.title ?? "Proyecto"; dialog.showModal(); }));
+  const closeDialog = () => dialog?.close();
+  document.querySelector<HTMLButtonElement>("#close-project-dialog")?.addEventListener("click", closeDialog);
+  dialog?.addEventListener("click", (event) => { if (event.target === dialog) closeDialog(); });
+</script>

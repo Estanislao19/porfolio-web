@@ -1,32 +1,7 @@
 ---
- const personalImageAlt = "Soft-dev"
+import BrandLogo from "@/components/BrandLogo.astro";
 ---
-
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
-  >
-    <p>
-      En Dev-Tech, transformamos ideas en soluciones digitales de alto impacto<strong
-        >.Nos especializamos en la creación, actualización y mantenimiento de aplicaciones y servicios digitales, garantizando que tu negocio esté siempre a la vanguardia tecnológica</strong
-      >.
-    </p>
-
-    <p>
-      Nos desatacamos en:<strong
-        > Desarrollo de aplicaciones personalizadas y escalables.
-          Optimización y actualización de plataformas digitales.
-          Soporte y mantenimiento para asegurar rendimiento y seguridad.</strong
-      >
-    </p>
-
-    <p>
-       <strong
-        >Confía en Dev-Tech para llevar tu proyecto al siguiente nivel.</strong
-      >
-    </p>
-  </div>
-
-  <img width="200" height="200" src="/dev-tech.png" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
-
-</article>
+<div class="grid items-center gap-10 md:grid-cols-[.8fr_1.2fr] md:gap-14">
+  <div class="mx-auto w-full max-w-sm rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-100 to-white p-6 dark:border-slate-700 dark:from-slate-900 dark:to-slate-950"><BrandLogo variant="mark" alt="Isotipo DT de Dev-Tech" width={160} height={71} class="h-32 w-56" /></div>
+  <div><p class="text-sm font-semibold uppercase tracking-[.2em] text-cyan-700 dark:text-cyan-300">Sobre Dev-Tech</p><h3 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl">Tecnología construida en diálogo con tu negocio.</h3><div class="mt-6 space-y-4 text-base leading-7 text-slate-600 dark:text-slate-300"><p>Dev-Tech es una marca de desarrollo de software que convierte necesidades reales en productos digitales claros y funcionales. Trabajamos en web, mobile y sistemas a medida, adaptando la solución a cada contexto.</p><p>El proceso empieza por entender el problema y acordar prioridades. Mantenemos una comunicación directa durante el desarrollo y acompañamos la puesta en marcha y los siguientes pasos técnicos.</p><p>Buscamos que cada decisión tenga sentido para las personas que usan el producto y para el equipo que lo mantiene.</p></div><a href="#contacto" class="mt-7 inline-flex items-center font-semibold text-cyan-700 hover:underline dark:text-cyan-300">Conversemos sobre tu proyecto <span class="ml-2" aria-hidden="true">→</span></a></div>
+</div>

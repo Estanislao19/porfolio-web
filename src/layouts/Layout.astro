@@ -1,58 +1,70 @@
 ---
-import "@fontsource-variable/onest"
-
-import Header from "../components/Header.astro"
-
-
-interface Props {
-  title: string
-  description?: string;
-}
-
-const { description, title } = Astro.props
+import "@fontsource-variable/onest";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { siteConfig } from "@/config/site.mjs";
+interface Props { title: string; description?: string; noIndex?: boolean; }
+const { title, description = "Dev-Tech desarrolla soluciones digitales a medida.", noIndex = false } = Astro.props;
+const site = Astro.site ?? siteConfig.url;
+const canonical = new URL(Astro.url.pathname, site);
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.domain,
+  logo: new URL("/brand/dev-tech-wordmark-ink.png", site).href,
+  email: siteConfig.email,
+  description,
+};
 ---
-
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#f8fafc" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href={`${siteConfig.domain}/sitemap.xml`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Dev-Tech" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL("/og-dev-tech.png", site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dev-Tech: desarrollo de software y soluciones digitales" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL("/og-dev-tech.png", site)} />
+    <meta name="twitter:image:alt" content="Dev-Tech: desarrollo de software y soluciones digitales" />
+    {!noIndex && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
     <title>{title}</title>
- 
+    <script is:inline>
+      (() => { const saved = localStorage.getItem("theme") || "system"; const dark = saved === "dark" || (saved === "system" && matchMedia("(prefers-color-scheme: dark)").matches); document.documentElement.classList.toggle("dark", dark); document.documentElement.style.colorScheme = dark ? "dark" : "light"; })();
+    </script>
   </head>
-
-  <body class="relative text-black dark:text-white">
-    <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-    >
-    </div>
+  <body class="min-h-screen bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+    <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_75%_55%_at_50%_-10%,rgba(34,211,238,.12),transparent)] dark:bg-[radial-gradient(ellipse_75%_55%_at_50%_-10%,rgba(8,145,178,.18),transparent)]" aria-hidden="true"></div>
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-slate-900">Saltar al contenido</a>
     <Header />
-    <slot />
-   
+    <div id="contenido"><slot /></div>
+    {Astro.url.pathname !== "/" && <Footer />}
     <style is:global>
-      :root {
-        color-scheme: light dark;
-      }
-
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        color: rgba(17, 17, 17, 0.9);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overscroll-behavior: none;
-      }
-
-   
+      :root { color-scheme: light; }
+      :root.dark { color-scheme: dark; }
+      html { font-family: "Onest Variable", system-ui, sans-serif; scroll-behavior: smooth; scroll-padding-top: 6rem; }
+      body { min-width: 320px; overflow-x: clip; }
+      img { max-width: 100%; }
+      a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #0891b2; outline-offset: 3px; }
+      ::selection { background: rgba(34,211,238,.3); }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
     </style>
   </body>
 </html>

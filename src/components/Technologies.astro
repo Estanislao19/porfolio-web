@@ -1,0 +1,20 @@
+---
+import { projects } from "@/data-projects";
+import TechnologyIcon from "@/components/TechnologyIcon.astro";
+const groups: Record<string, string[]> = {
+  Frontend: ["Next.js", "React", "AngularJS", "TypeScript", "Tailwind CSS"],
+  Backend: ["Node.js", "Express", "NestJS", "Prisma", "Odoo 15", "WebSockets"],
+  "Bases de datos": ["PostgreSQL", "DynamoDB", "Supabase"],
+  "Aplicaciones móviles": ["React Native", "Expo", "Flutter", "FlutterFlow", "Cordova", "Android"],
+  "CMS y E-commerce": ["WordPress", "WooCommerce", "Shopify"],
+  "Inteligencia artificial": ["Inteligencia artificial"],
+  "Automatizaciones e integraciones": ["APIs REST", "Google Apps Script", "Google Sheets", "Google Calendar", "Keycloak", "AWS", "AWS Cognito"],
+};
+const confirmed = new Set(projects.flatMap((project) => project.technologies));
+---
+<div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+  {Object.entries(groups).map(([group, technologies]) => {
+    const listed = technologies.filter((technology) => confirmed.has(technology) || technology === "Inteligencia artificial" && projects.some((project) => /inteligencia artificial|\bIA\b/i.test(project.description)));
+    return listed.length ? <section class="rounded-2xl border border-slate-200 bg-white/75 p-5 dark:border-slate-800 dark:bg-slate-900/60"><h3 class="text-sm font-semibold text-slate-900 dark:text-white">{group}</h3><ul class="mt-4 flex flex-wrap gap-2">{listed.map((technology) => <li class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 text-xs font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-200"><TechnologyIcon name={technology} />{technology}</li>)}</ul></section> : null;
+  })}
+</div>

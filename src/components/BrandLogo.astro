@@ -1,0 +1,16 @@
+---
+interface Props {
+  variant?: "mark" | "wordmark";
+  alt?: string;
+  class?: string;
+  width?: number;
+  height?: number;
+}
+
+const { variant = "mark", alt = "Dev-Tech", class: className = "size-8 object-contain", width = variant === "mark" ? 160 : 570, height = 71 } = Astro.props;
+const base = `/brand/dev-tech-${variant}`;
+---
+<span class="inline-flex shrink-0 items-center">
+  <img src={`${base}-ink.png`} alt={alt} width={width} height={height} decoding="async" class={`object-contain dark:hidden ${className}`} />
+  <img src={`${base}.png`} alt="" aria-hidden="true" width={width} height={height} decoding="async" class={`hidden object-contain dark:block ${className}`} />
+</span>
